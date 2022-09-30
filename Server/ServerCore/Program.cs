@@ -7,6 +7,10 @@ namespace ServerCore
     // 메모리 배리어
     // A) 코드 재배치 억제
     // B) 가시성
+
+    // 1) Full Memory Barrier (ASM MFENCE, C# Thread.MemoryBarrier) : Store/Load 둘다 막는다
+    // 2) Store Memory Barrier (ASM SFENCE) : Store만 막는다
+    // 3) Load Memory Barrier (ASM LFENCE) : Load만 막는다
     class Program
     {
         static int x = 0;
