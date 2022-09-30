@@ -22,6 +22,8 @@ namespace ServerCore
             ThreadPool.SetMinThreads(1, 1);
             ThreadPool.SetMaxThreads(3, 3);
             Parallel.Invoke(WhoAmI, WhoAmI, WhoAmI, WhoAmI, WhoAmI, WhoAmI, WhoAmI, WhoAmI);
+
+            ThreadName.Dispose();
         }
     }
 }
